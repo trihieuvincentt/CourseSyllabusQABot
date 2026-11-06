@@ -15,6 +15,11 @@ from dotenv import load_dotenv
 from google import genai
 from qdrant_client import QdrantClient
 
+try:
+    from syllabus_qa.math_solver import MathInputError, looks_like_math, solve_math
+except ModuleNotFoundError:  # Running ui_server.py directly from the repository root.
+    from src.syllabus_qa.math_solver import MathInputError, looks_like_math, solve_math
+
 from scripts.test_hybrid_rrf import (
     BM25,
     DEFAULT_COLLECTION,
@@ -226,10 +231,22 @@ class UIRequestHandler(BaseHTTPRequestHandler):
         if not isinstance(question, str) or not question.strip():
             self._send_json(400, {"error": "Vui lòng nhập câu hỏi."})
             return
+        question = question.strip()
+        if looks_like_math(question):
+            try:
+                result = solve_math(question)
+            except MathInputError as exc:
+                self._send_json(400, {"error": str(exc)})
+                return
+            self._send_json(200, {
+                "answer": result.answer,
+                "sources": [],
+                "retrieval_trace": {"mode": "math", "operation": result.operation},
+            })
+            return
         try:
             with _RUNTIME_LOCK:
                 runtime = get_runtime()
-                question = question.strip()
                 sources, trace = runtime.retrieve(question)
                 answer = runtime.generate_answer(question, sources)
         except Exception:
