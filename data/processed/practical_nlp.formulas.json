@@ -1,0 +1,1139 @@
+{
+  "schema_version": "1.0",
+  "generator": "syllabus-qa formula index",
+  "source_file": "practical_nlp.unified.chunks.jsonl",
+  "document_id": "practical-natural-language-processing",
+  "summary": {
+    "chunks_scanned": 637,
+    "chunks_with_formulas": 11,
+    "formula_count": 22,
+    "by_formula_type": {
+      "code_function": 1,
+      "plain": 21
+    },
+    "by_formula_kind": {
+      "calculation": 10,
+      "definition": 6,
+      "expression": 5,
+      "function_reference": 1
+    },
+    "by_domain": {
+      "code": 1,
+      "evaluation-metric": 2,
+      "general-math": 2,
+      "text-representation": 17
+    }
+  },
+  "tag_vocabulary": {
+    "domain": [
+      "code",
+      "evaluation-metric",
+      "general-math",
+      "text-representation"
+    ],
+    "evaluable": [
+      "arithmetic"
+    ],
+    "formula-kind": [
+      "calculation",
+      "definition",
+      "expression",
+      "function_reference"
+    ],
+    "formula-target": [
+      "c1",
+      "f1",
+      "idf",
+      "similarity",
+      "tf"
+    ],
+    "formula-type": [
+      "code_function",
+      "plain"
+    ],
+    "function": [
+      "cos",
+      "log2",
+      "min",
+      "sum"
+    ],
+    "math": [
+      "code-function",
+      "formula"
+    ],
+    "operator": [
+      "add",
+      "approx-equal",
+      "divide",
+      "equals",
+      "multiply",
+      "power",
+      "subtract",
+      "sum"
+    ],
+    "source-chunk-type": [
+      "code"
+    ]
+  },
+  "formulas": [
+    {
+      "formula_id": "practical-natural-language-processing:text:0160#f01",
+      "source_chunk_id": "practical-natural-language-processing:text:0160",
+      "document_id": "practical-natural-language-processing",
+      "chunk_type": "text",
+      "page_start": 98,
+      "page_end": 98,
+      "raw": "0/1",
+      "canonical": "0 / 1",
+      "raw_context": "s category, we assume a test set where we have the ground truth or labels (human annotated, correct answers). Labels could be binary (e.g., 0/1 for text classification), one-to-two words (e.g., names for named entity recognition), or large text itself (e.g., text translated by machi",
+      "formula_type": "plain",
+      "formula_kind": "expression",
+      "target": null,
+      "variables": [],
+      "functions": [],
+      "operators": [
+        "divide"
+      ],
+      "numbers": [
+        "0",
+        "1"
+      ],
+      "tokens": [
+        "0",
+        "1"
+      ],
+      "signature": "kind=expression|ops=divide|fns=|vars=|nums=0,1",
+      "metadata_tags": [
+        "domain:general-math",
+        "evaluable:arithmetic",
+        "formula-kind:expression",
+        "formula-type:plain",
+        "math:formula",
+        "operator:divide"
+      ],
+      "computed": {
+        "expression": "0 / 1",
+        "value": 0.0,
+        "rounded": "0"
+      },
+      "embed_text": "0 / 1. 0 divide 1"
+    },
+    {
+      "formula_id": "practical-natural-language-processing:table2-2:p99-p100:full#f01",
+      "source_chunk_id": "practical-natural-language-processing:table2-2:p99-p100:full",
+      "document_id": "practical-natural-language-processing",
+      "chunk_type": "table",
+      "page_start": 99,
+      "page_end": 100,
+      "raw": "(2 × Precision × Recall) / (Precision + Recall)",
+      "canonical": "(2 * Precision * Recall) / (Precision + Recall)",
+      "raw_context": "to give a single metric, which also captures the trade-off between precision and recall, i.e., completeness and exactness. F1 is defined as (2 × Precision × Recall) / (Precision + Recall).; Applications: Used simultaneously with accuracy in most of the classification tasks. It is also used in sequence-labeling tasks, such as",
+      "formula_type": "plain",
+      "formula_kind": "definition",
+      "target": "F1",
+      "variables": [
+        "Precision",
+        "Recall"
+      ],
+      "functions": [],
+      "operators": [
+        "multiply",
+        "divide",
+        "add"
+      ],
+      "numbers": [
+        "2"
+      ],
+      "tokens": [
+        "2",
+        "Precision",
+        "Recall"
+      ],
+      "signature": "kind=definition|ops=multiply,divide,add|fns=|vars=precision,recall|nums=2",
+      "metadata_tags": [
+        "domain:evaluation-metric",
+        "formula-kind:definition",
+        "formula-target:f1",
+        "formula-type:plain",
+        "math:formula",
+        "operator:add",
+        "operator:divide",
+        "operator:multiply",
+        "unicode-math"
+      ],
+      "embed_text": "Formula for F1. (2 * Precision * Recall) / (Precision + Recall). (2 multiply Precision multiply Recall) divide (Precision plus Recall). Variables: Precision, Recall"
+    },
+    {
+      "formula_id": "practical-natural-language-processing:text:0179#f01",
+      "source_chunk_id": "practical-natural-language-processing:text:0179",
+      "document_id": "practical-natural-language-processing",
+      "chunk_type": "text",
+      "page_start": 114,
+      "page_end": 114,
+      "raw": "similarity = cos θ = A · BA 2 B 2 = ∑i = 1 n AiBi ∑ i = 1 n Ai2 ∑i = 1n Bi2",
+      "canonical": "similarity = cos theta = A * BA 2 B 2 = sum i = 1 n AiBi sum i = 1 n Ai2 sum i = 1n Bi2",
+      "raw_context": "nically decreasing from 0° to 180°. Given two vectors, A and B, each with n components, the similarity between them is computed as follows: similarity = cos θ = A · BA 2 B 2 = ∑i = 1 n AiBi ∑ i = 1 n Ai2 ∑i = 1n Bi2 where Ai and Bi are the ith components of vectors A and B, respectively. Sometimes, people also use Euclidean distance between vectors to c",
+      "formula_type": "plain",
+      "formula_kind": "definition",
+      "target": "similarity",
+      "variables": [
+        "similarity",
+        "A",
+        "BA",
+        "B",
+        "sum",
+        "i",
+        "n",
+        "AiBi",
+        "Ai2",
+        "Bi2"
+      ],
+      "functions": [
+        "cos",
+        "sum"
+      ],
+      "operators": [
+        "equals",
+        "multiply",
+        "sum"
+      ],
+      "numbers": [
+        "2",
+        "1"
+      ],
+      "tokens": [
+        "similarity",
+        "cos",
+        "theta",
+        "A",
+        "BA",
+        "2",
+        "B",
+        "i",
+        "1",
+        "n",
+        "AiBi",
+        "Ai2",
+        "Bi2"
+      ],
+      "signature": "kind=definition|ops=equals,multiply,sum|fns=cos,sum|vars=a,ai2,aibi,b,ba,bi2,i,n,similarity,sum|nums=2,1",
+      "metadata_tags": [
+        "domain:text-representation",
+        "formula-kind:definition",
+        "formula-target:similarity",
+        "formula-type:plain",
+        "function:cos",
+        "function:sum",
+        "math:formula",
+        "operator:equals",
+        "operator:multiply",
+        "operator:sum",
+        "unicode-math"
+      ],
+      "embed_text": "Formula for similarity. similarity = cos theta = A * BA 2 B 2 = sum i = 1 n AiBi sum i = 1 n Ai2 sum i = 1n Bi2. similarity equals cos theta equals A multiply BA 2 B 2 equals sum i equals 1 n AiBi sum i equals 1 n Ai2 sum i equals 1n Bi2. Variables: similarity, A, BA, B, sum, i, n, AiBi, Ai2, Bi2. Functions: cos, sum"
+    },
+    {
+      "formula_id": "practical-natural-language-processing:text:0195#f01",
+      "source_chunk_id": "practical-natural-language-processing:text:0195",
+      "document_id": "practical-natural-language-processing",
+      "chunk_type": "text",
+      "page_start": 121,
+      "page_end": 121,
+      "raw": "TF-IDF score = TF * IDF",
+      "canonical": "TF-IDF score = TF * IDF",
+      "raw_context": "loge Total number of documents in the corpusNumber of documents with term t in them The TF-IDF score is a product of these two terms. Thus, TF-IDF score = TF * IDF . Let’s compute TF-IDF scores for our toy corpus. Some terms appear in only one document, some appear in two, while others appear in three",
+      "formula_type": "plain",
+      "formula_kind": "definition",
+      "target": null,
+      "variables": [
+        "TF",
+        "IDF",
+        "score"
+      ],
+      "functions": [],
+      "operators": [
+        "equals",
+        "multiply"
+      ],
+      "numbers": [],
+      "tokens": [
+        "TF",
+        "IDF",
+        "score"
+      ],
+      "signature": "kind=definition|ops=equals,multiply|fns=|vars=idf,score,tf|nums=",
+      "metadata_tags": [
+        "domain:text-representation",
+        "formula-kind:definition",
+        "formula-type:plain",
+        "math:formula",
+        "operator:equals",
+        "operator:multiply"
+      ],
+      "embed_text": "TF-IDF score = TF * IDF. TF minus IDF score equals TF multiply IDF. Variables: TF, IDF, score"
+    },
+    {
+      "formula_id": "practical-natural-language-processing:table3-2:p121-p121:full#f01",
+      "source_chunk_id": "practical-natural-language-processing:table3-2:p121-p121:full",
+      "document_id": "practical-natural-language-processing",
+      "chunk_type": "table",
+      "page_start": 121,
+      "page_end": 121,
+      "raw": "log2(4/3) = 0.4114",
+      "canonical": "log2(4 / 3) = 0.4114",
+      "raw_context": "ze of our corpus is N=4. Hence, corresponding TF-IDF values for each term are shown in Table 3-2. Word: dog; TF score: ⅓ = 0.33; IDF score: log2(4/3) = 0.4114; TF-IDF score: 0.4114 * 0.33 = 0.136 Word: bites; TF score: ⅙ = 0.17; IDF score: log2(4/2) = 1; TF-IDF score: 1* 0.17 = 0.17 Word: man; TF",
+      "formula_type": "plain",
+      "formula_kind": "calculation",
+      "target": "idf",
+      "variables": [],
+      "functions": [
+        "log2"
+      ],
+      "operators": [
+        "divide",
+        "equals"
+      ],
+      "numbers": [
+        "4",
+        "3",
+        "0.4114"
+      ],
+      "tokens": [
+        "log2",
+        "4",
+        "3",
+        "0.4114"
+      ],
+      "signature": "kind=calculation|ops=divide,equals|fns=log2|vars=|nums=4,3,0.4114",
+      "metadata_tags": [
+        "domain:text-representation",
+        "evaluable:arithmetic",
+        "formula-kind:calculation",
+        "formula-target:idf",
+        "formula-type:plain",
+        "function:log2",
+        "math:formula",
+        "operator:divide",
+        "operator:equals"
+      ],
+      "computed": {
+        "expression": "log2(4 / 3)",
+        "value": 0.415037,
+        "rounded": "0.415037"
+      },
+      "embed_text": "Formula for idf. log2(4 / 3) = 0.4114. log2(4 divide 3) equals 0.4114. Functions: log2"
+    },
+    {
+      "formula_id": "practical-natural-language-processing:table3-2:p121-p121:full#f02",
+      "source_chunk_id": "practical-natural-language-processing:table3-2:p121-p121:full",
+      "document_id": "practical-natural-language-processing",
+      "chunk_type": "table",
+      "page_start": 121,
+      "page_end": 121,
+      "raw": "0.4114 * 0.33 = 0.136",
+      "canonical": "0.4114 * 0.33 = 0.136",
+      "raw_context": "rresponding TF-IDF values for each term are shown in Table 3-2. Word: dog; TF score: ⅓ = 0.33; IDF score: log2(4/3) = 0.4114; TF-IDF score: 0.4114 * 0.33 = 0.136 Word: bites; TF score: ⅙ = 0.17; IDF score: log2(4/2) = 1; TF-IDF score: 1* 0.17 = 0.17 Word: man; TF score: 0.33; IDF score: log2(4/3) =0.",
+      "formula_type": "plain",
+      "formula_kind": "calculation",
+      "target": "idf",
+      "variables": [],
+      "functions": [],
+      "operators": [
+        "multiply",
+        "equals"
+      ],
+      "numbers": [
+        "0.4114",
+        "0.33",
+        "0.136"
+      ],
+      "tokens": [
+        "0.4114",
+        "0.33",
+        "0.136"
+      ],
+      "signature": "kind=calculation|ops=multiply,equals|fns=|vars=|nums=0.4114,0.33,0.136",
+      "metadata_tags": [
+        "domain:text-representation",
+        "evaluable:arithmetic",
+        "formula-kind:calculation",
+        "formula-target:idf",
+        "formula-type:plain",
+        "math:formula",
+        "operator:equals",
+        "operator:multiply"
+      ],
+      "computed": {
+        "expression": "0.4114 * 0.33",
+        "value": 0.135762,
+        "rounded": "0.135762"
+      },
+      "embed_text": "Formula for idf. 0.4114 * 0.33 = 0.136. 0.4114 multiply 0.33 equals 0.136"
+    },
+    {
+      "formula_id": "practical-natural-language-processing:table3-2:p121-p121:full#f03",
+      "source_chunk_id": "practical-natural-language-processing:table3-2:p121-p121:full",
+      "document_id": "practical-natural-language-processing",
+      "chunk_type": "table",
+      "page_start": 121,
+      "page_end": 121,
+      "raw": "log2(4/2) = 1",
+      "canonical": "log2(4 / 2) = 1",
+      "raw_context": "rd: dog; TF score: ⅓ = 0.33; IDF score: log2(4/3) = 0.4114; TF-IDF score: 0.4114 * 0.33 = 0.136 Word: bites; TF score: ⅙ = 0.17; IDF score: log2(4/2) = 1; TF-IDF score: 1* 0.17 = 0.17 Word: man; TF score: 0.33; IDF score: log2(4/3) =0.4114; TF-IDF score: 0.4114 * 0.33 = 0.136 Word: eats; TF s",
+      "formula_type": "plain",
+      "formula_kind": "calculation",
+      "target": "idf",
+      "variables": [],
+      "functions": [
+        "log2"
+      ],
+      "operators": [
+        "divide",
+        "equals"
+      ],
+      "numbers": [
+        "4",
+        "2",
+        "1"
+      ],
+      "tokens": [
+        "log2",
+        "4",
+        "2",
+        "1"
+      ],
+      "signature": "kind=calculation|ops=divide,equals|fns=log2|vars=|nums=4,2,1",
+      "metadata_tags": [
+        "domain:text-representation",
+        "evaluable:arithmetic",
+        "formula-kind:calculation",
+        "formula-target:idf",
+        "formula-type:plain",
+        "function:log2",
+        "math:formula",
+        "operator:divide",
+        "operator:equals"
+      ],
+      "computed": {
+        "expression": "log2(4 / 2)",
+        "value": 1.0,
+        "rounded": "1"
+      },
+      "embed_text": "Formula for idf. log2(4 / 2) = 1. log2(4 divide 2) equals 1. Functions: log2"
+    },
+    {
+      "formula_id": "practical-natural-language-processing:table3-2:p121-p121:full#f04",
+      "source_chunk_id": "practical-natural-language-processing:table3-2:p121-p121:full",
+      "document_id": "practical-natural-language-processing",
+      "chunk_type": "table",
+      "page_start": 121,
+      "page_end": 121,
+      "raw": "1* 0.17 = 0.17",
+      "canonical": "1 * 0.17 = 0.17",
+      "raw_context": "IDF score: log2(4/3) = 0.4114; TF-IDF score: 0.4114 * 0.33 = 0.136 Word: bites; TF score: ⅙ = 0.17; IDF score: log2(4/2) = 1; TF-IDF score: 1* 0.17 = 0.17 Word: man; TF score: 0.33; IDF score: log2(4/3) =0.4114; TF-IDF score: 0.4114 * 0.33 = 0.136 Word: eats; TF score: 0.17; IDF score: log2(4/",
+      "formula_type": "plain",
+      "formula_kind": "calculation",
+      "target": "idf",
+      "variables": [],
+      "functions": [],
+      "operators": [
+        "multiply",
+        "equals"
+      ],
+      "numbers": [
+        "1",
+        "0.17"
+      ],
+      "tokens": [
+        "1",
+        "0.17"
+      ],
+      "signature": "kind=calculation|ops=multiply,equals|fns=|vars=|nums=1,0.17",
+      "metadata_tags": [
+        "domain:text-representation",
+        "evaluable:arithmetic",
+        "formula-kind:calculation",
+        "formula-target:idf",
+        "formula-type:plain",
+        "math:formula",
+        "operator:equals",
+        "operator:multiply"
+      ],
+      "computed": {
+        "expression": "1 * 0.17",
+        "value": 0.17,
+        "rounded": "0.17"
+      },
+      "embed_text": "Formula for idf. 1 * 0.17 = 0.17. 1 multiply 0.17 equals 0.17"
+    },
+    {
+      "formula_id": "practical-natural-language-processing:table3-2:p121-p121:full#f05",
+      "source_chunk_id": "practical-natural-language-processing:table3-2:p121-p121:full",
+      "document_id": "practical-natural-language-processing",
+      "chunk_type": "table",
+      "page_start": 121,
+      "page_end": 121,
+      "raw": "1/12 = 0.083",
+      "canonical": "1 / 12 = 0.083",
+      "raw_context": "TF-IDF score: 0.4114 * 0.33 = 0.136 Word: eats; TF score: 0.17; IDF score: log2(4/2) =1; TF-IDF score: 1* 0.17 = 0.17 Word: meat; TF score: 1/12 = 0.083; IDF score: log2(4/1) =2; TF-IDF score: 2 * 0.083 = 0.17 Word: food; TF score: 0.083; IDF score: log2(4/1) =2; TF-IDF score: 2 * 0.083 = 0.",
+      "formula_type": "plain",
+      "formula_kind": "calculation",
+      "target": "tf",
+      "variables": [],
+      "functions": [],
+      "operators": [
+        "divide",
+        "equals"
+      ],
+      "numbers": [
+        "1",
+        "12",
+        "0.083"
+      ],
+      "tokens": [
+        "1",
+        "12",
+        "0.083"
+      ],
+      "signature": "kind=calculation|ops=divide,equals|fns=|vars=|nums=1,12,0.083",
+      "metadata_tags": [
+        "domain:text-representation",
+        "evaluable:arithmetic",
+        "formula-kind:calculation",
+        "formula-target:tf",
+        "formula-type:plain",
+        "math:formula",
+        "operator:divide",
+        "operator:equals"
+      ],
+      "computed": {
+        "expression": "1 / 12",
+        "value": 0.083333,
+        "rounded": "0.0833333"
+      },
+      "embed_text": "Formula for tf. 1 / 12 = 0.083. 1 divide 12 equals 0.083"
+    },
+    {
+      "formula_id": "practical-natural-language-processing:table3-2:p121-p121:full#f06",
+      "source_chunk_id": "practical-natural-language-processing:table3-2:p121-p121:full",
+      "document_id": "practical-natural-language-processing",
+      "chunk_type": "table",
+      "page_start": 121,
+      "page_end": 121,
+      "raw": "log2(4/1) =2",
+      "canonical": "log2(4 / 1) = 2",
+      "raw_context": "33 = 0.136 Word: eats; TF score: 0.17; IDF score: log2(4/2) =1; TF-IDF score: 1* 0.17 = 0.17 Word: meat; TF score: 1/12 = 0.083; IDF score: log2(4/1) =2; TF-IDF score: 2 * 0.083 = 0.17 Word: food; TF score: 0.083; IDF score: log2(4/1) =2; TF-IDF score: 2 * 0.083 = 0.17",
+      "formula_type": "plain",
+      "formula_kind": "calculation",
+      "target": "idf",
+      "variables": [],
+      "functions": [
+        "log2"
+      ],
+      "operators": [
+        "divide",
+        "equals"
+      ],
+      "numbers": [
+        "4",
+        "1",
+        "2"
+      ],
+      "tokens": [
+        "log2",
+        "4",
+        "1",
+        "2"
+      ],
+      "signature": "kind=calculation|ops=divide,equals|fns=log2|vars=|nums=4,1,2",
+      "metadata_tags": [
+        "domain:text-representation",
+        "evaluable:arithmetic",
+        "formula-kind:calculation",
+        "formula-target:idf",
+        "formula-type:plain",
+        "function:log2",
+        "math:formula",
+        "operator:divide",
+        "operator:equals"
+      ],
+      "computed": {
+        "expression": "log2(4 / 1)",
+        "value": 2.0,
+        "rounded": "2"
+      },
+      "embed_text": "Formula for idf. log2(4 / 1) = 2. log2(4 divide 1) equals 2. Functions: log2"
+    },
+    {
+      "formula_id": "practical-natural-language-processing:table3-2:p121-p121:full#f07",
+      "source_chunk_id": "practical-natural-language-processing:table3-2:p121-p121:full",
+      "document_id": "practical-natural-language-processing",
+      "chunk_type": "table",
+      "page_start": 121,
+      "page_end": 121,
+      "raw": "2 * 0.083 = 0.17",
+      "canonical": "2 * 0.083 = 0.17",
+      "raw_context": "ore: 0.17; IDF score: log2(4/2) =1; TF-IDF score: 1* 0.17 = 0.17 Word: meat; TF score: 1/12 = 0.083; IDF score: log2(4/1) =2; TF-IDF score: 2 * 0.083 = 0.17 Word: food; TF score: 0.083; IDF score: log2(4/1) =2; TF-IDF score: 2 * 0.083 = 0.17",
+      "formula_type": "plain",
+      "formula_kind": "calculation",
+      "target": "idf",
+      "variables": [],
+      "functions": [],
+      "operators": [
+        "multiply",
+        "equals"
+      ],
+      "numbers": [
+        "2",
+        "0.083",
+        "0.17"
+      ],
+      "tokens": [
+        "2",
+        "0.083",
+        "0.17"
+      ],
+      "signature": "kind=calculation|ops=multiply,equals|fns=|vars=|nums=2,0.083,0.17",
+      "metadata_tags": [
+        "domain:text-representation",
+        "evaluable:arithmetic",
+        "formula-kind:calculation",
+        "formula-target:idf",
+        "formula-type:plain",
+        "math:formula",
+        "operator:equals",
+        "operator:multiply"
+      ],
+      "computed": {
+        "expression": "2 * 0.083",
+        "value": 0.166,
+        "rounded": "0.166"
+      },
+      "embed_text": "Formula for idf. 2 * 0.083 = 0.17. 2 multiply 0.083 equals 0.17"
+    },
+    {
+      "formula_id": "practical-natural-language-processing:text:0196#f01",
+      "source_chunk_id": "practical-natural-language-processing:text:0196",
+      "document_id": "practical-natural-language-processing",
+      "chunk_type": "text",
+      "page_start": 121,
+      "page_end": 121,
+      "raw": "⅓ = 0.33 log2(4/3) = 0.4114 0.4114 * 0.33 = 0.136",
+      "canonical": "1 / 3 = 0.33 log2(4 / 3) = 0.4114 0.4114 * 0.33 = 0.136",
+      "raw_context": "Word TF score IDF score TF-IDF score dog ⅓ = 0.33 log2(4/3) = 0.4114 0.4114 * 0.33 = 0.136 bites ⅙ = 0.17 log2(4/2) = 1 1* 0.17 = 0.17 man 0.33 log2(4/3) =0.4114 0.4114 * 0.33 = 0.136 eats 0.17 log2(4/2) =1 1* 0.17 = 0.17 meat 1/1",
+      "formula_type": "plain",
+      "formula_kind": "calculation",
+      "target": "idf",
+      "variables": [],
+      "functions": [
+        "log2"
+      ],
+      "operators": [
+        "divide",
+        "equals",
+        "multiply"
+      ],
+      "numbers": [
+        "1",
+        "3",
+        "0.33",
+        "4",
+        "0.4114",
+        "0.136"
+      ],
+      "tokens": [
+        "1",
+        "3",
+        "0.33",
+        "log2",
+        "4",
+        "0.4114",
+        "0.136"
+      ],
+      "signature": "kind=calculation|ops=divide,equals,multiply|fns=log2|vars=|nums=1,3,0.33,4,0.4114,0.136",
+      "metadata_tags": [
+        "domain:text-representation",
+        "evaluable:arithmetic",
+        "formula-kind:calculation",
+        "formula-target:idf",
+        "formula-type:plain",
+        "function:log2",
+        "math:formula",
+        "operator:divide",
+        "operator:equals",
+        "operator:multiply"
+      ],
+      "computed": {
+        "expression": "1 / 3",
+        "value": 0.333333,
+        "rounded": "0.333333"
+      },
+      "embed_text": "Formula for idf. 1 / 3 = 0.33 log2(4 / 3) = 0.4114 0.4114 * 0.33 = 0.136. 1 divide 3 equals 0.33 log2(4 divide 3) equals 0.4114 0.4114 multiply 0.33 equals 0.136. Functions: log2"
+    },
+    {
+      "formula_id": "practical-natural-language-processing:text:0196#f02",
+      "source_chunk_id": "practical-natural-language-processing:text:0196",
+      "document_id": "practical-natural-language-processing",
+      "chunk_type": "text",
+      "page_start": 121,
+      "page_end": 121,
+      "raw": "⅙ = 0.17 log2(4/2) = 1 1* 0.17 = 0.17 man 0.33 log2(4/3) =0.4114 0.4114 * 0.33 = 0.136",
+      "canonical": "1 / 6 = 0.17 log2(4 / 2) = 1 1 * 0.17 = 0.17 man 0.33 log2(4 / 3) = 0.4114 0.4114 * 0.33 = 0.136",
+      "raw_context": "Word TF score IDF score TF-IDF score dog ⅓ = 0.33 log2(4/3) = 0.4114 0.4114 * 0.33 = 0.136 bites ⅙ = 0.17 log2(4/2) = 1 1* 0.17 = 0.17 man 0.33 log2(4/3) =0.4114 0.4114 * 0.33 = 0.136 eats 0.17 log2(4/2) =1 1* 0.17 = 0.17 meat 1/12 = 0.083 log2(4/1) =2 2* 0.083 = 0.17 food 0.083 log2(4/1) =2 2* 0.083 = 0.17 The TF-IDF vec",
+      "formula_type": "plain",
+      "formula_kind": "calculation",
+      "target": "idf",
+      "variables": [
+        "man"
+      ],
+      "functions": [
+        "log2"
+      ],
+      "operators": [
+        "divide",
+        "equals",
+        "multiply"
+      ],
+      "numbers": [
+        "1",
+        "6",
+        "0.17",
+        "4",
+        "2",
+        "0.33",
+        "3",
+        "0.4114",
+        "0.136"
+      ],
+      "tokens": [
+        "1",
+        "6",
+        "0.17",
+        "log2",
+        "4",
+        "2",
+        "man",
+        "0.33",
+        "3",
+        "0.4114",
+        "0.136"
+      ],
+      "signature": "kind=calculation|ops=divide,equals,multiply|fns=log2|vars=man|nums=1,6,0.17,4,2,0.33,3,0.4114,0.136",
+      "metadata_tags": [
+        "domain:text-representation",
+        "evaluable:arithmetic",
+        "formula-kind:calculation",
+        "formula-target:idf",
+        "formula-type:plain",
+        "function:log2",
+        "math:formula",
+        "operator:divide",
+        "operator:equals",
+        "operator:multiply"
+      ],
+      "computed": {
+        "expression": "1 / 6",
+        "value": 0.166667,
+        "rounded": "0.166667"
+      },
+      "embed_text": "Formula for idf. 1 / 6 = 0.17 log2(4 / 2) = 1 1 * 0.17 = 0.17 man 0.33 log2(4 / 3) = 0.4114 0.4114 * 0.33 = 0.136. 1 divide 6 equals 0.17 log2(4 divide 2) equals 1 1 multiply 0.17 equals 0.17 man 0.33 log2(4 divide 3) equals 0.4114 0.4114 multiply 0.33 equals 0.136. Variables: man. Functions: log2"
+    },
+    {
+      "formula_id": "practical-natural-language-processing:text:0196#f03",
+      "source_chunk_id": "practical-natural-language-processing:text:0196",
+      "document_id": "practical-natural-language-processing",
+      "chunk_type": "text",
+      "page_start": 121,
+      "page_end": 121,
+      "raw": "0.17 log2(4/2) =1 1* 0.17 = 0.17",
+      "canonical": "0.17 log2(4 / 2) = 1 1 * 0.17 = 0.17",
+      "raw_context": "log2(4/3) = 0.4114 0.4114 * 0.33 = 0.136 bites ⅙ = 0.17 log2(4/2) = 1 1* 0.17 = 0.17 man 0.33 log2(4/3) =0.4114 0.4114 * 0.33 = 0.136 eats 0.17 log2(4/2) =1 1* 0.17 = 0.17 meat 1/12 = 0.083 log2(4/1) =2 2* 0.083 = 0.17 food 0.083 log2(4/1) =2 2* 0.083 = 0.17 The TF-IDF vector representation for a document is t",
+      "formula_type": "plain",
+      "formula_kind": "definition",
+      "target": "idf",
+      "variables": [],
+      "functions": [
+        "log2"
+      ],
+      "operators": [
+        "divide",
+        "equals",
+        "multiply"
+      ],
+      "numbers": [
+        "0.17",
+        "4",
+        "2",
+        "1"
+      ],
+      "tokens": [
+        "0.17",
+        "log2",
+        "4",
+        "2",
+        "1"
+      ],
+      "signature": "kind=definition|ops=divide,equals,multiply|fns=log2|vars=|nums=0.17,4,2,1",
+      "metadata_tags": [
+        "domain:text-representation",
+        "formula-kind:definition",
+        "formula-target:idf",
+        "formula-type:plain",
+        "function:log2",
+        "math:formula",
+        "operator:divide",
+        "operator:equals",
+        "operator:multiply"
+      ],
+      "embed_text": "Formula for idf. 0.17 log2(4 / 2) = 1 1 * 0.17 = 0.17. 0.17 log2(4 divide 2) equals 1 1 multiply 0.17 equals 0.17. Functions: log2"
+    },
+    {
+      "formula_id": "practical-natural-language-processing:text:0196#f04",
+      "source_chunk_id": "practical-natural-language-processing:text:0196",
+      "document_id": "practical-natural-language-processing",
+      "chunk_type": "text",
+      "page_start": 121,
+      "page_end": 121,
+      "raw": "1/12 = 0.083 log2(4/1) =2 2* 0.083 = 0.17",
+      "canonical": "1 / 12 = 0.083 log2(4 / 1) = 2 2 * 0.083 = 0.17",
+      "raw_context": "136 bites ⅙ = 0.17 log2(4/2) = 1 1* 0.17 = 0.17 man 0.33 log2(4/3) =0.4114 0.4114 * 0.33 = 0.136 eats 0.17 log2(4/2) =1 1* 0.17 = 0.17 meat 1/12 = 0.083 log2(4/1) =2 2* 0.083 = 0.17 food 0.083 log2(4/1) =2 2* 0.083 = 0.17 The TF-IDF vector representation for a document is then simply the TF-IDF score for each term in th",
+      "formula_type": "plain",
+      "formula_kind": "calculation",
+      "target": "idf",
+      "variables": [],
+      "functions": [
+        "log2"
+      ],
+      "operators": [
+        "divide",
+        "equals",
+        "multiply"
+      ],
+      "numbers": [
+        "1",
+        "12",
+        "0.083",
+        "4",
+        "2",
+        "0.17"
+      ],
+      "tokens": [
+        "1",
+        "12",
+        "0.083",
+        "log2",
+        "4",
+        "2",
+        "0.17"
+      ],
+      "signature": "kind=calculation|ops=divide,equals,multiply|fns=log2|vars=|nums=1,12,0.083,4,2,0.17",
+      "metadata_tags": [
+        "domain:text-representation",
+        "evaluable:arithmetic",
+        "formula-kind:calculation",
+        "formula-target:idf",
+        "formula-type:plain",
+        "function:log2",
+        "math:formula",
+        "operator:divide",
+        "operator:equals",
+        "operator:multiply"
+      ],
+      "computed": {
+        "expression": "1 / 12",
+        "value": 0.083333,
+        "rounded": "0.0833333"
+      },
+      "embed_text": "Formula for idf. 1 / 12 = 0.083 log2(4 / 1) = 2 2 * 0.083 = 0.17. 1 divide 12 equals 0.083 log2(4 divide 1) equals 2 2 multiply 0.083 equals 0.17. Functions: log2"
+    },
+    {
+      "formula_id": "practical-natural-language-processing:text:0196#f05",
+      "source_chunk_id": "practical-natural-language-processing:text:0196",
+      "document_id": "practical-natural-language-processing",
+      "chunk_type": "text",
+      "page_start": 121,
+      "page_end": 121,
+      "raw": "0.083 log2(4/1) =2 2* 0.083 = 0.17",
+      "canonical": "0.083 log2(4 / 1) = 2 2 * 0.083 = 0.17",
+      "raw_context": "man 0.33 log2(4/3) =0.4114 0.4114 * 0.33 = 0.136 eats 0.17 log2(4/2) =1 1* 0.17 = 0.17 meat 1/12 = 0.083 log2(4/1) =2 2* 0.083 = 0.17 food 0.083 log2(4/1) =2 2* 0.083 = 0.17 The TF-IDF vector representation for a document is then simply the TF-IDF score for each term in that document. So, for D1 we get Dog bites",
+      "formula_type": "plain",
+      "formula_kind": "definition",
+      "target": "idf",
+      "variables": [],
+      "functions": [
+        "log2"
+      ],
+      "operators": [
+        "divide",
+        "equals",
+        "multiply"
+      ],
+      "numbers": [
+        "0.083",
+        "4",
+        "1",
+        "2",
+        "0.17"
+      ],
+      "tokens": [
+        "0.083",
+        "log2",
+        "4",
+        "1",
+        "2",
+        "0.17"
+      ],
+      "signature": "kind=definition|ops=divide,equals,multiply|fns=log2|vars=|nums=0.083,4,1,2,0.17",
+      "metadata_tags": [
+        "domain:text-representation",
+        "formula-kind:definition",
+        "formula-target:idf",
+        "formula-type:plain",
+        "function:log2",
+        "math:formula",
+        "operator:divide",
+        "operator:equals",
+        "operator:multiply"
+      ],
+      "embed_text": "Formula for idf. 0.083 log2(4 / 1) = 2 2 * 0.083 = 0.17. 0.083 log2(4 divide 1) equals 2 2 multiply 0.083 equals 0.17. Functions: log2"
+    },
+    {
+      "formula_id": "practical-natural-language-processing:text:0196#f06",
+      "source_chunk_id": "practical-natural-language-processing:text:0196",
+      "document_id": "practical-natural-language-processing",
+      "chunk_type": "text",
+      "page_start": 121,
+      "page_end": 121,
+      "raw": "(Ch3/TF_IDF",
+      "canonical": "(Ch3 / TF_IDF",
+      "raw_context": "y the TF-IDF score for each term in that document. So, for D1 we get Dog bites man eats meat food 0.136 0.17 0.136 0 0 0 The following code (Ch3/TF_IDF.ipynb) shows how to use TF-IDF to represent text:",
+      "formula_type": "plain",
+      "formula_kind": "expression",
+      "target": null,
+      "variables": [
+        "Ch3",
+        "TF_IDF"
+      ],
+      "functions": [],
+      "operators": [
+        "divide"
+      ],
+      "numbers": [],
+      "tokens": [
+        "Ch3",
+        "TF_IDF"
+      ],
+      "signature": "kind=expression|ops=divide|fns=|vars=ch3,tf_idf|nums=",
+      "metadata_tags": [
+        "domain:text-representation",
+        "formula-kind:expression",
+        "formula-type:plain",
+        "math:formula",
+        "operator:divide"
+      ],
+      "embed_text": "(Ch3 / TF_IDF. (Ch3 divide TF_IDF. Variables: Ch3, TF_IDF"
+    },
+    {
+      "formula_id": "practical-natural-language-processing:text:0202#f01",
+      "source_chunk_id": "practical-natural-language-processing:text:0202",
+      "document_id": "practical-natural-language-processing",
+      "chunk_type": "text",
+      "page_start": 124,
+      "page_end": 124,
+      "raw": "King – Man + Woman ≈ Queen",
+      "canonical": "King - Man + Woman ~= Queen",
+      "raw_context": "ed word representation model known as “Word2vec, ” based on “distribu‐ tional similarity, ” can capture word analogy relationships such as: King – Man + Woman ≈ Queen Their model was able to correctly answer many more analogies like this. Figure 3-5 shows a snapshot of a system based on Word2vec answering",
+      "formula_type": "plain",
+      "formula_kind": "expression",
+      "target": "similarity",
+      "variables": [
+        "King",
+        "Man",
+        "Woman",
+        "Queen"
+      ],
+      "functions": [],
+      "operators": [
+        "subtract",
+        "add",
+        "approx-equal"
+      ],
+      "numbers": [],
+      "tokens": [
+        "King",
+        "Man",
+        "Woman",
+        "Queen"
+      ],
+      "signature": "kind=expression|ops=subtract,add,approx-equal|fns=|vars=king,man,queen,woman|nums=",
+      "metadata_tags": [
+        "domain:text-representation",
+        "formula-kind:expression",
+        "formula-target:similarity",
+        "formula-type:plain",
+        "math:formula",
+        "operator:add",
+        "operator:approx-equal",
+        "operator:subtract",
+        "unicode-math"
+      ],
+      "embed_text": "Formula for similarity. King - Man + Woman ~= Queen. King minus Man plus Woman approximately equal Queen. Variables: King, Man, Woman, Queen"
+    },
+    {
+      "formula_id": "practical-natural-language-processing:code:glove_embedding_matrix#f01",
+      "source_chunk_id": "practical-natural-language-processing:code:glove_embedding_matrix",
+      "document_id": "practical-natural-language-processing",
+      "chunk_type": "code",
+      "page_start": 172,
+      "page_end": 172,
+      "raw": "min",
+      "canonical": "min(...)",
+      "raw_context": "glove_embedding_matrix",
+      "formula_type": "code_function",
+      "formula_kind": "function_reference",
+      "target": null,
+      "variables": [],
+      "functions": [
+        "min"
+      ],
+      "operators": [],
+      "numbers": [],
+      "tokens": [
+        "min"
+      ],
+      "signature": "kind=function_reference|fns=min",
+      "metadata_tags": [
+        "domain:code",
+        "formula-kind:function_reference",
+        "formula-type:code_function",
+        "function:min",
+        "math:code-function",
+        "source-chunk-type:code"
+      ],
+      "embed_text": "Code functions: min"
+    },
+    {
+      "formula_id": "practical-natural-language-processing:text:0282#f01",
+      "source_chunk_id": "practical-natural-language-processing:text:0282",
+      "document_id": "practical-natural-language-processing",
+      "chunk_type": "text",
+      "page_start": 177,
+      "page_end": 177,
+      "raw": "0.3 × f1 + 0.4 × f2",
+      "canonical": "0.3 * f1 + 0.4 * f2",
+      "raw_context": "for a given test instance of a binary classifier with classes A and B, a Lime lin‐ ear model around this instance could be something like -0.3 × f1 + 0.4 × f2 with a prediction B. This indicates that the presence of feature f1 will negatively affect this prediction (by 0.3) and skew it toward A. [",
+      "formula_type": "plain",
+      "formula_kind": "expression",
+      "target": "f1",
+      "variables": [
+        "f1",
+        "f2"
+      ],
+      "functions": [],
+      "operators": [
+        "multiply",
+        "add"
+      ],
+      "numbers": [
+        "0.3",
+        "0.4"
+      ],
+      "tokens": [
+        "0.3",
+        "f1",
+        "0.4",
+        "f2"
+      ],
+      "signature": "kind=expression|ops=multiply,add|fns=|vars=f1,f2|nums=0.3,0.4",
+      "metadata_tags": [
+        "domain:evaluation-metric",
+        "formula-kind:expression",
+        "formula-target:f1",
+        "formula-type:plain",
+        "math:formula",
+        "operator:add",
+        "operator:multiply",
+        "unicode-math"
+      ],
+      "embed_text": "Formula for f1. 0.3 * f1 + 0.4 * f2. 0.3 multiply f1 plus 0.4 multiply f2. Variables: f1, f2"
+    },
+    {
+      "formula_id": "practical-natural-language-processing:text:0366#f01",
+      "source_chunk_id": "practical-natural-language-processing:text:0366",
+      "document_id": "practical-natural-language-processing",
+      "chunk_type": "text",
+      "page_start": 253,
+      "page_end": 253,
+      "raw": "c1=0.1, c2=10",
+      "canonical": "c1 = 0.1, c2 = 10",
+      "raw_context": "value in enumerate(vector): wordfeats ['v{}'.format(iv)]=value feats.append(wordfeats) return feats # training crf = CRF(algorithm='lbfgs', c1=0.1, c2=10, max_iterations=50) # Fit on training data crf.fit(X_train, Y_train) We obtain an F1 of 85.5 with the use of a CRF++ model. More details ca",
+      "formula_type": "plain",
+      "formula_kind": "definition",
+      "target": "c1",
+      "variables": [
+        "c1",
+        "c2"
+      ],
+      "functions": [],
+      "operators": [
+        "equals"
+      ],
+      "numbers": [
+        "0.1",
+        "10"
+      ],
+      "tokens": [
+        "c1",
+        "0.1",
+        "c2",
+        "10"
+      ],
+      "signature": "kind=definition|ops=equals|fns=|vars=c1,c2|nums=0.1,10",
+      "metadata_tags": [
+        "domain:text-representation",
+        "formula-kind:definition",
+        "formula-target:c1",
+        "formula-type:plain",
+        "math:formula",
+        "operator:equals"
+      ],
+      "embed_text": "Formula for c1. c1 = 0.1, c2 = 10. c1 equals 0.1, c2 equals 10. Variables: c1, c2"
+    },
+    {
+      "formula_id": "practical-natural-language-processing:text:0459#f01",
+      "source_chunk_id": "practical-natural-language-processing:text:0459",
+      "document_id": "practical-natural-language-processing",
+      "chunk_type": "text",
+      "page_start": 322,
+      "page_end": 322,
+      "raw": "[A-Z][^A-Z]",
+      "canonical": "[A-Z][^A-Z]",
+      "raw_context": "layingInTheCold, etc. This is simple to handle. The following code snippet does the job for us: processed_tweet_text = “ “.join(re.findall(‘[A-Z][^A-Z]*’, tweet_text)) For GoodMorning, this will return “Good Morning. ”",
+      "formula_type": "plain",
+      "formula_kind": "expression",
+      "target": null,
+      "variables": [
+        "A",
+        "Z"
+      ],
+      "functions": [],
+      "operators": [
+        "power"
+      ],
+      "numbers": [],
+      "tokens": [
+        "A",
+        "Z"
+      ],
+      "signature": "kind=expression|ops=power|fns=|vars=a,z|nums=",
+      "metadata_tags": [
+        "domain:general-math",
+        "formula-kind:expression",
+        "formula-type:plain",
+        "math:formula",
+        "operator:power"
+      ],
+      "embed_text": "[A-Z][^A-Z]. [A minus Z][ power A minus Z]. Variables: A, Z"
+    }
+  ]
+}
